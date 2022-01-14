@@ -1,0 +1,23 @@
+```class ListNode(object):
+    def __init__(self, val: int = 0, next=None):
+        self.val = val
+        self.next = next
+
+
+a = ListNode()
+b = ListNode(2)
+c = ListNode(val=3, next=b)
+d = ListNode(5, next=c)
+
+l = [1, 4, 7, 9, 15]
+
+
+def list_to_listnode(l: list) -> ListNode:
+    l.reverse()
+
+    current_node = None
+    for val in l:
+        new_node = ListNode(val=val, next=current_node)
+        current_node = new_node
+
+    return current_node```
